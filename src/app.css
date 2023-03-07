@@ -1,0 +1,77 @@
+.header {
+  margin-top: 20px;
+}
+
+.galleria {
+  float: left;
+  padding-left: 20px;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.startslideshow {
+  float: right;
+}
+
+button {
+  float: right;
+  border-radius: 0px;
+  background-color: white;
+}
+
+.masonry {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    padding-left: 6%;
+    padding-right: 4%;
+    margin: auto;
+  }
+  .masonry .column {
+    width: 25%;
+    margin-bottom: 20px;
+  }
+
+  .masonry .item {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .masonry .item img {
+    width: 90%;
+  }
+  .masonry .item .title {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    width: 80%;
+  }
+  .masonry .item .artist {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px black;
+  }
+  /* Media queries to adjust column width */
+  @media screen and (max-width: 2440px) {
+    .masonry .column {
+      width: 25%;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .masonry .column {
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .masonry .column {
+      width: 100%;
+    }
+  }
