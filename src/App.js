@@ -3,6 +3,7 @@ import Gallery from './Gallery';
 import Artwork from './Artwork';
 
 
+
 const artworks = [
   {
     id: 1,
@@ -125,7 +126,7 @@ const artworks = [
 
   {
     id: 12,
-    title: 'The Boy in the Read Vest',
+    title: 'The Boy in the Red Vest',
     artist: 'Paul Cézanne',
     thumbnail: '../assets/the-boy-in-the-red-vest/thumbnail.jpg',
     artistImage: '../assets/the-boy-in-the-red-vest/artist.jpg',

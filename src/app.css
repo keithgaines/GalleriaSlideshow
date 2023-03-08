@@ -1,7 +1,3 @@
-.header {
-  margin-top: 20px;
-}
-
 .galleria {
   float: left;
   padding-left: 20px;
@@ -9,10 +5,14 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
+  margin-top: 0%;
 }
 
 .startslideshow {
   float: right;
+  font-size: 24px;
+  line-height: 15px;
+  margin-top: 0%;
 }
 
 button {
@@ -28,6 +28,7 @@ button {
     padding-left: 6%;
     padding-right: 4%;
     margin: auto;
+    padding-top: 5%;
   }
   .masonry .column {
     width: 25%;

@@ -4,12 +4,11 @@ function Artwork(props) {
   return (
     <div>
       <div className="header">
-        <span className="galleria">galleria</span>
-        <span className='stopslideshow'>
+        <div className="galleria">galleria</div>
+        <div className='stopslideshow'>
           <a href="/">STOP SLIDESHOW</a>
-          </span>
+          </div>
       </div>
-      <br />
       <br />
       <br />
       <hr />
@@ -35,12 +34,9 @@ function Artwork(props) {
       </div>
       <div className="textblurb">
         <p>{props.artwork.blurb}</p>
-
-        <div className="gotosource">
-          <a href={props.artwork.sourceUrl}>
+        <a href={props.artwork.sourceUrl}>
             <p>Go to source</p>
           </a>
-        </div>
       </div>
       <div className="slideshow-progress">
         <div className="progress-bar"></div>

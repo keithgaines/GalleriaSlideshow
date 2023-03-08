@@ -5,10 +5,10 @@ function Gallery() {
   return (
     <div>
       <div className="header">
-        <span className="galleria">galleria</span>
-        <span className='stopslideshow'>
+        <div className="galleria">galleria</div>
+        <div className='startslideshow'>
           <a href="/artwork/1">START SLIDESHOW</a>
-          </span>
+        </div>
       </div>
       <br />
       <br />

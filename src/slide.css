@@ -8,6 +8,7 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
+    margin-top: 0%;
 }
 
 .header {
@@ -20,7 +21,7 @@
 
 .stopslideshow {
     float: right;
-    z-index: 5;
+    margin-top: 0%;
 }
 
 .heroimage {
@@ -31,6 +32,7 @@
 .heroimage img {
     width: 100%;
     margin: auto;
+    height: 30vh;
 }
 
 .view-image-btn:hover {
@@ -53,9 +55,9 @@
 
 .titleandartistbox {
     position: absolute;
-    bottom: -15%;
+    bottom: -35%;
     left: 0;
-    width: 80%;
+    width: 70%;
     z-index: 1;
     background-color: white;
     padding-left: 25px;
@@ -64,16 +66,16 @@
 .title {
     font-family: 'Libre Baskerville', serif;
     font-weight: 600;
-    font-size: 15px;
-    /* line-height: 19px; */
+    font-size: 15pt;
+    /* line-height 19px; */
 }
 
 .artist {
     font-family: 'Libre Baskerville', serif;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 13pt;
     /* line-height: 15px; */
-    color: #E5E5E5;
+    color: #7D7D7D;
     color: rgb(243, 243, 243) hsl(0, 0%, 95%)
 }
 
@@ -93,23 +95,26 @@
 
 .artistimage img {
     width: 100%;
+    margin-top: 20%;
 }
 
 .year {
     display: inline-block;
     font-family: 'Libre Baskerville', serif;
     font-weight: 700; /* Bold */
-    font-size: 38px;
     opacity: 30%;
     /* margin-bottom: 20px; */
     width: 50%;
-    color: #E5E5E5;
-    color: rgb(243, 243, 243) hsl(0, 0%, 95%)
+    color: #7D7D7D;
+    color: rgb(243, 243, 243) hsl(0, 0%, 95%);
+    position: absolute;
+    right: 45%;
+    top: 50%;
 
 }
 
-.gotosource {
-    margin-top: 20%;
+.year h1 {
+    font-size: 150px;
 }
 
 .slideshow-progress {
@@ -129,19 +134,35 @@
   
 .titleandartist {
     float: left;
-    width: 60%;
+    width: 40%;
 }
 
+
 .footer .artist {
-    width: 80%;
+    width: 50%;
     color: black;
 }
 
+.titleandartistfooter {
+    float: left;
+    width: 100%;
+}
 
 .slideshow-controls {
     float: right;
-    margin-bottom: 50px;
-    width: 40%;
+    width: 100%;
+    margin-top: 8%;
+    margin-right: 8%;
+    gap: 20px; 
+}
+
+.slideshow-controls button {
+    padding: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 100px;
+    background-color: black;
+    color: white;
 }
   
 #lightbox {
@@ -172,84 +193,51 @@
     cursor: pointer;
 }
 
-@media (min-width: 601px) {
-
-    .heroimage img {
-        width: 70%;
-        margin: auto;
-        max-height: 80vh;
-    }
-
-    .view-image-btn {
-        position: absolute;
-        top: 70%;
-        left: 10px;
-    }
-
-    .titleandartistbox {
-        position: absolute;
-        top: 0%;
-        left: 60%;
-        width: 80%;
-        height: 40%;
-      }
-
-      .artistimage {
-        position: absolute;
-        right: 5%;
-        top: 41%;
-        margin-bottom: 30px;
-        padding-left: 20px;
-    }
-
-    .year {
-        position: relative;
-        margin-top: -20%;
-        font-size: 100px;
-        line-height: 150px;
-    }
-
-    .textblurb {
-        margin-top: -30%;
-    }
-}
 
 @media (min-width: 1024px) {
 
     .heroimage {
-        height: 20%;
         margin-bottom: 35%;
     }
 
     .heroimage img {
-        width: 40%;
+        width: 60%;
         margin: auto;
+        height: 70vh;
     }
 
     .view-image-btn {
         position: absolute;
-        bottom: 15%;
-        left: 10px;
+        top: 80%;
+        height: 10%;
     }
 
     .titleandartistbox {
         position: absolute;
         top: 0%;
-        left: 30%;
-        width: 20%;
+        left: 40%;
+        width: 30%;
         height: 40%;
+      }
+
+      .titleandartistbox h1 {
+        font-size: 29pt;
+      }
+
+      .titleandartistbox p {
+        font-size: 15pt;
       }
 
       .artistimage {
         position: absolute;
-        right: 53%;
-        top: 60%;
+        right: 25%;
+        top: 45%;
     }
 
     .year {
         position: absolute;
-        top: 20%;
-        right: 20%;
+        top: 70%;
+        left: 5%;
         font-size: 100px;
         line-height: 150px;
         color: rgb(229, 229, 229) hsl(0, 0%, 90%);
@@ -257,30 +245,55 @@
 
     .textblurb {
         position: absolute;
-        width: 30%;
-        right: 15%;
-        bottom: 0%;    
-        margin-bottom: 10%;
+        width: 80%;
+        top: 80%;    
+        margin: 10%;
+        right: 0;
+        /* margin-top: 30%; */
+    }
+
+    .titleandartistfooter {
+        float: left;
+        width: 50%;
+    }
+    
+    .slideshow-controls {
+        float: right;
+        width: 40%;
+        margin-top: 8%;
+        margin-right: 8%;
+        gap: 20px; 
+    }
+    
+    .slideshow-controls button {
+        padding: 15px;
+        margin-right: 10px;
+        margin-left: 10px;
+        width: 100px;
+        background-color: black;
+        color: white;
     }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1440px) {
 
     .heroimage {
-        margin-bottom: 2%;
         position: relative;
         width: 100%;
-        margin-bottom: 5%;
+        margin-bottom: 0%;
+        margin-top: 5%;
     }
 
     .heroimage img {
         width: 40%;
         margin: auto;
+        padding-bottom: 0%;
+        max-height: 80vh;
     }
 
     .view-image-btn {
         position: absolute;
-        top: 80%;
+        top: 70%;
         left: 15px;
         width: 10%;
         height: 10%;
@@ -290,30 +303,33 @@
         position: absolute;
         top: 0%;
         left: 30%; 
-        width: 20%;
-        height: 65%;
+        width: 30%;
+        height: 40%;
       }
 
+      .titleandartistfooter {
+        float: left;
+        width: 50%;
+    }
+
       .title {
-        font-size: 35px;
+        font-size: 30px;
       }
 
       .artist {
         font-size: 25px;
-        color: rgb(229, 229, 229) hsl(0, 0%, 70%); 
     }
 
       .artistimage {
         position: absolute;
         right: 50%;
-        bottom: 0%;
-        margin-top: 5%;
+        top: 70%;
     }
 
     .year {
         position: absolute;
-        top: 50%;
-        right: 30%;
+        top: 7%;
+        left: 65%;
         font-size: 100px;
         line-height: 150px;
         width: 10%;
@@ -322,10 +338,11 @@
     .textblurb {
         position: absolute;
         width: 30%;
-        right: 12%;
-        bottom: 0%;    
+        right: 0%;
+        top: 25%;    
         margin-bottom: 10%;
         z-index: 1;
 
     }
+
 }
