@@ -1,30 +1,54 @@
-import './slide.css'
+import React, { useState, useEffect } from 'react';
+import Lightbox from './Lightbox';
+import './slide.css';
+import images from './images';
 
 function Artwork(props) {
+  const [showLightbox, setShowLightbox] = useState(false);
+  const [currentArtworkIndex, setCurrentArtworkIndex] = useState(props.artworkIndex);
+  const [currentArtworkUrl, setCurrentArtworkUrl] = useState(props.artwork.thumbnail);
+
+  const setCloseLightbox = () => {
+    setShowLightbox(false);
+  };
+
+  useEffect(() => {
+    setCurrentArtworkIndex(props.artworkIndex);
+    setCurrentArtworkUrl(props.artwork.thumbnail);
+  }, [props.artworkIndex, props.artwork.thumbnail]);
+
+  function handleViewImage() {
+    setShowLightbox(true);
+  }
+
+    console.log('images', images);
   return (
-    <div>
+    <div className="artwork-container">
       <div className="header">
         <div className="galleria">galleria</div>
         <div className='stopslideshow'>
           <a href="/">STOP SLIDESHOW</a>
-          </div>
+        </div>
       </div>
       <br />
       <br />
       <hr />
+      <div className="view-image-btn-container">
+        <button className="view-image-btn" onClick={handleViewImage}>View Image</button>
+      </div>
       <div className="heroimage">
         <img srcSet={props.artwork.thumbnail} alt="heroimage" />
-        <button className="view-image-btn">View Image</button>
+
         <div className='boxparent'>
-        <div className="titleandartistbox">
-          <div className="title">
-            <h1>{props.artwork.title}</h1>
-          </div>
-          <div className="artist">
-            <p>{props.artwork.artist}</p>
+          <div className="titleandartistbox">
+            <div className="title">
+              <h1>{props.artwork.title}</h1>
+            </div>
+            <div className="artist">
+              <p>{props.artwork.artist}</p>
+            </div>
           </div>
         </div>
-      </div>
       </div>
       <div className="artistimage">
         <img src={props.artwork.artistImage} alt="artist image" />
@@ -59,14 +83,19 @@ function Artwork(props) {
           </a>
         </div>
       </div>
-      <div id="lightbox" className="lightbox">
-        <div className="lightbox-content">
-          <img id="lightbox-image" src={props.artwork.galleryImage} alt={props.artwork.title} />
-          <button className="close-btn" id="close-btn">
-            &times;
-          </button>
-        </div>
-      </div>
+      {showLightbox && (
+        <Lightbox
+          images={images}
+          imageUrl={currentArtworkUrl}
+          lightboxImage={props.artwork.lightboxImage}
+          imageUrls={props.artwork.images}
+          setCloseLightbox={setCloseLightbox}
+          previousArtworkUrl={props.previousArtworkUrl}
+          currentArtworkIndex={currentArtworkIndex}
+          artwork={props.artwork}
+          handleCloseLightbox={() => setShowLightbox(false)}
+        />
+      )}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Gallery from './Gallery';
 import Artwork from './Artwork';
+import Lightbox from './Lightbox';
 
 
 
@@ -13,7 +14,8 @@ const artworks = [
     artistImage: '../assets/starry-night/artist.jpg',
     year: 1889,
     blurb: 'Although The Starry Night was painted during the day in Van Goghs ground-floor studio, it would be inaccurate to state that the picture was painted from memory. The view has been identified as the one from his bedroom window, facing east, a view which Van Gogh painted variations of no fewer than twenty-one times, including The Starry Night. "Through the iron-barred window," he wrote to his brother, Theo, around 23 May 1889, "I can see an enclosed square of wheat ... above which, in the morning, I watch the sun rise in all its glory.',
-    sourceUrl: 'https://en.wikipedia.org/wiki/The_Starry_Night'
+    sourceUrl: 'https://en.wikipedia.org/wiki/The_Starry_Night',
+    lightboxImage: 'public/assets/starry-night/hero-large.jpg'
   },
   {
     id: 2,
@@ -191,6 +193,7 @@ function App() {
                 previousArtworkUrl={`/artwork/${artworks[index - 1]?.id}`}
                 nextArtworkUrl={`/artwork/${artworks[index + 1]?.id}`}
                 galleryImage={artwork.image}
+                lightboxImage={artwork.lightboxImage}
               />
             )}
           />
