@@ -169,7 +169,6 @@ const artworks = [
   },
 ];
 
-
 function App() {
   return (
     <Router>
@@ -200,6 +199,5 @@ function App() {
     </Router>
   );
 }
-
 
 export default App;
