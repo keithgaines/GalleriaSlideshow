@@ -6,7 +6,9 @@ function Gallery() {
     <div>
       <div className="header">
         <span className="galleria">galleria</span>
-        <span style={{float: 'right'}}><a href="http://keithgaines.github.io/galleriaslideshow/starry-night.html">START SLIDESHOW</a></span>
+        <span className='stopslideshow'>
+          <a href="/artwork/1">START SLIDESHOW</a>
+          </span>
       </div>
       <br />
       <br />

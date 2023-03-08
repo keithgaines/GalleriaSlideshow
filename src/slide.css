@@ -10,8 +10,17 @@
     line-height: 29px;
 }
 
+.header {
+    margin-top: 3%;
+}
+
 .startslideshow {
     float: right;
+}
+
+.stopslideshow {
+    float: right;
+    z-index: 5;
 }
 
 .heroimage {
@@ -54,7 +63,7 @@
 
 .title {
     font-family: 'Libre Baskerville', serif;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 15px;
     /* line-height: 19px; */
 }
@@ -64,6 +73,8 @@
     font-weight: 400;
     font-size: 13px;
     /* line-height: 15px; */
+    color: #E5E5E5;
+    color: rgb(243, 243, 243) hsl(0, 0%, 95%)
 }
 
 .textblurb {
@@ -92,6 +103,9 @@
     opacity: 30%;
     /* margin-bottom: 20px; */
     width: 50%;
+    color: #E5E5E5;
+    color: rgb(243, 243, 243) hsl(0, 0%, 95%)
+
 }
 
 .gotosource {
@@ -118,8 +132,9 @@
     width: 60%;
 }
 
-.titleandartistfooter {
+.footer .artist {
     width: 80%;
+    color: black;
 }
 
 
@@ -191,7 +206,6 @@
         margin-top: -20%;
         font-size: 100px;
         line-height: 150px;
-        color: rgb(229, 229, 229) hsl(0, 0%, 90%)
     }
 
     .textblurb {
@@ -234,10 +248,10 @@
     .year {
         position: absolute;
         top: 20%;
-        right: 0%;
+        right: 20%;
         font-size: 100px;
         line-height: 150px;
-        color: rgb(229, 229, 229) hsl(0, 0%, 90%)
+        color: rgb(229, 229, 229) hsl(0, 0%, 90%);
     }
 
     .textblurb {
@@ -272,29 +286,40 @@
         top: 0%;
         left: 30%;
         width: 20%;
-        height: 20%;
+        height: 60%;
       }
+
+      .title {
+        font-size: 35px;
+      }
+
+      .artist {
+        font-size: 25px;
+        color: rgb(229, 229, 229) hsl(0, 0%, 70%); 
+    }
 
       .artistimage {
         position: absolute;
-        right: 53%;
-        top: 50%;
+        right: 50%;
+        top: 65%;
     }
 
     .year {
         position: absolute;
         top: 50%;
-        right: 0%;
+        right: 30%;
         font-size: 100px;
         line-height: 150px;
-        color: rgb(229, 229, 229) hsl(0, 0%, 90%)
+        width: 10%;
     }
 
     .textblurb {
         position: absolute;
         width: 30%;
-        right: 15%;
-        bottom: 10%;    
+        right: 12%;
+        bottom: 0%;    
         margin-bottom: 10%;
+        z-index: 1;
+
     }
 }

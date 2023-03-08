@@ -1,19 +1,66 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Gallery from './Gallery';
 import Artwork from './Artwork';
 
-function App() {
-  const artworks = [
-    { id: 1, title: 'Starry Night', artist: 'Vincent van Gogh', image: 'assets/starry-night.jpg', year: 1889, blurb: '...' },
-    { id: 2, title: 'Girl with a Pearl Earring', artist: 'Johannes Vermeer', image: 'assets/girl-with-pearl-earrring/hero-small.jpg.jpg', year: 1665, blurb: 'The painting is a tronie, the Dutch 17th-century description of a "head" that was not meant to be a portrait. It depicts a European girl wearing an exotic dress, an oriental turban, and what was thought to be a very large pearl as an earring. In 2014, Dutch astrophysicist Vincent Icke raised doubts about the material of the earring and argued that it looks more like polished tin than pearl on the grounds of the specular reflection, the pear shape and the large size of the earring.' },
-    // { id: 3, title: ''}
-  ];
 
+const artworks = [
+  {
+    id: 1,
+    title: 'Starry Night',
+    artist: 'Vincent van Gogh',
+    thumbnail: '../assets/starry-night/thumbnail.jpg',
+    artistImage: '../assets/starry-night/artist.jpg',
+    year: 1889,
+    blurb: 'Although The Starry Night was painted during the day in Van Goghs ground-floor studio, it would be inaccurate to state that the picture was painted from memory. The view has been identified as the one from his bedroom window, facing east, a view which Van Gogh painted variations of no fewer than twenty-one times, including The Starry Night. "Through the iron-barred window," he wrote to his brother, Theo, around 23 May 1889, "I can see an enclosed square of wheat ... above which, in the morning, I watch the sun rise in all its glory.',
+    sourceUrl: 'https://en.wikipedia.org/wiki/The_Starry_Night'
+  },
+  {
+    id: 2,
+    title: 'Girl with a Pearl Earring',
+    artist: 'Johannes Vermeer',
+    image: '../assets/girl-with-pearl-earring.jpg',
+    year: 1665,
+    blurb: '...',
+  },
+  {
+    id: 3,
+    title: 'The Persistence of Memory',
+    artist: 'Salvador Dali',
+    image: 'assets/persistence-of-memory.jpg',
+    year: 1931,
+    blurb: '...',
+  },
+];
+
+
+function App() {
   return (
     <Router>
-        {artworks.map(artwork => (
-          <Route exact path={`/artwork/${artwork.id}`} element={<Artwork artwork={artwork} />}>
-          </Route>
+      <Routes>
+        <Route path="/" element={<Gallery artworks={artworks} />} />
+        {artworks.map((artwork, index) => (
+          <Route 
+            key={artwork.id}
+            path={`/artwork/${artwork.id}`}
+            element={(
+              <Artwork
+                artwork={artwork}
+                nextArtworkId={artworks[index + 1]?.id}
+                title={artwork.title}
+                artist={artwork.artist}
+                artistImage={artwork.artistImage}
+                thumbnail={artwork.thumbnail}
+                year={artwork.year}
+                textBlurb={artwork.blurb}
+                previousArtworkUrl={`/artwork/${artworks[index - 1]?.id}`}
+                nextArtworkUrl={`/artwork/${artworks[index + 1]?.id}`}
+                galleryImage={artwork.image}
+              />
+            )}
+          />
         ))}
+      </Routes>
     </Router>
   );
 }
