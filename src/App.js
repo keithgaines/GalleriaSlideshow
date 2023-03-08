@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Gallery from './Gallery';
 import Artwork from './Artwork';

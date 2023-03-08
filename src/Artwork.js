@@ -16,6 +16,7 @@ function Artwork(props) {
       <div className="heroimage">
         <img srcSet={props.artwork.thumbnail} alt="heroimage" />
         <button className="view-image-btn">View Image</button>
+        <div className='boxparent'>
         <div className="titleandartistbox">
           <div className="title">
             <h1>{props.artwork.title}</h1>
@@ -25,8 +26,9 @@ function Artwork(props) {
           </div>
         </div>
       </div>
+      </div>
       <div className="artistimage">
-        <img src={props.artwork.artistImage} alt="van goh portrait" />
+        <img src={props.artwork.artistImage} alt="artist image" />
       </div>
       <div className="year">
         <h1>{props.artwork.year}</h1>
