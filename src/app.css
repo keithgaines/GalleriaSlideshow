@@ -58,6 +58,7 @@ button {
     color: white;
     font-size: 14px;
     text-shadow: 1px 1px 2px black;
+    width: 90%;
   }
   /* Media queries to adjust column width */
   @media screen and (max-width: 2440px) {
