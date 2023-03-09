@@ -18,6 +18,7 @@ function Artwork(props) {
     setCurrentArtworkUrl(props.artwork.thumbnail);
   }, [props.artworkIndex, props.artwork.thumbnail]);
 
+  
   function handleViewImage() {
     const currentImage = images.find(img => img.id === props.artwork.id);
     setLightboxImageUrl(currentImage.url);
