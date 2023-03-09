@@ -3,7 +3,7 @@
 const images = [
     {
       id: 1,
-      url: process.env.PUBLIC_URL + '/assets/starry-night/hero-small.jpg',
+      url: '../assets/starry-night/hero-large.jpg',
       alt: 'lightbox image',
     },
     

@@ -7,6 +7,7 @@ function Artwork(props) {
   const [showLightbox, setShowLightbox] = useState(false);
   const [currentArtworkIndex, setCurrentArtworkIndex] = useState(props.artworkIndex);
   const [currentArtworkUrl, setCurrentArtworkUrl] = useState(props.artwork.thumbnail);
+  const [lightboxImageUrl, setLightboxImageUrl] = useState('');
 
   const setCloseLightbox = () => {
     setShowLightbox(false);
@@ -18,10 +19,11 @@ function Artwork(props) {
   }, [props.artworkIndex, props.artwork.thumbnail]);
 
   function handleViewImage() {
+    const currentImage = images.find(img => img.id === props.artwork.id);
+    setLightboxImageUrl(currentImage.url);
     setShowLightbox(true);
   }
 
-    console.log('images', images);
   return (
     <div className="artwork-container">
       <div className="header">
@@ -86,9 +88,7 @@ function Artwork(props) {
       {showLightbox && (
         <Lightbox
           images={images}
-          imageUrl={currentArtworkUrl}
-          lightboxImage={props.artwork.lightboxImage}
-          imageUrls={props.artwork.images}
+          imageUrl={lightboxImageUrl}
           setCloseLightbox={setCloseLightbox}
           previousArtworkUrl={props.previousArtworkUrl}
           currentArtworkIndex={currentArtworkIndex}

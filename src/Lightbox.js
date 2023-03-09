@@ -23,25 +23,16 @@ function Lightbox(props) {
   }
 
   function handleViewImageClick() {
-    setLightboxImageUrl(props.currentArtworkUrl);
-    console.log('view image clicked')
-  }
-
-  const images = [
-    {
-      id: 1,
-      url: process.env.PUBLIC_URL + '/assets/starry-night/hero-small.jpg',
-      alt: 'lightbox image',
-    },
-    
-  ];
+    const currentImage = images.find(img => img.id === props.currentArtworkId);
+    setLightboxImageUrl(currentImage.url);
+  };
 
   return (
     <div>
       {lightboxImageUrl !== '' && (
         <div id="lightbox" onClick={handleCloseLightbox}>
           <div className="lightbox-inner">
-            <img id="lightbox-image" src={images} alt="lightbox" />
+            <img id="lightbox-image" src={lightboxImageUrl} alt="lightbox" />
             <button id="close-btn" onClick={handleCloseLightbox}>Close</button>
           </div>
         </div>
