@@ -33,22 +33,22 @@ function Lightbox(props) {
         <div id="lightbox" onClick={handleCloseLightbox}>
           <div className="lightbox-inner">
             <img id="lightbox-image" src={lightboxImageUrl} alt="lightbox" />
-            <button id="close-btn" onClick={handleCloseLightbox}>Close</button>
+            <button id="close-btn" onClick={handleCloseLightbox}>X</button>
           </div>
         </div>
       )}
   
       <button className="view-image-btn" onClick={handleViewImageClick}>View Image</button>
   
-      <div className="slideshow">
+      {/* <div className="slideshow">
         <button className="prev-button" onClick={handlePrevClick} disabled={props.previousArtworkUrl === null}>
           Previous
         </button>
         <button className="next-button" onClick={handleNextClick} disabled={props.nextArtworkUrl === null}>
           Next
         </button>
-      </div>
-    </div>
+      </div> */}
+    </div> 
   );
   
 }

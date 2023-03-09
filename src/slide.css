@@ -21,18 +21,18 @@
 
 .stopslideshow {
     float: right;
-    margin-top: 0%;
+    margin-top: 1%;
 }
 
 .heroimage {
     position: relative;
-    margin-bottom: 20%;
+    margin-bottom: 40%;
 }
 
 .heroimage img {
-    width: 100%;
+    width: 100vw;
     margin: auto;
-    height: 30vh;
+    max-height: 70vh;
 }
 
 .view-image-btn:hover {
@@ -42,8 +42,8 @@
 
 .view-image-btn {
     position: absolute;
-    top: 5%;
-    left: 10px;
+    top: 7%;
+    left: 30px;
     display: block;
     margin: 30px auto;
     background-color: #000;
@@ -56,7 +56,7 @@
 
 .titleandartistbox {
     position: absolute;
-    bottom: -35%;
+    bottom: -45%;
     left: 0;
     width: 70%;
     z-index: 1;
@@ -109,13 +109,12 @@
     color: #7D7D7D;
     color: rgb(243, 243, 243) hsl(0, 0%, 95%);
     position: absolute;
-    right: 45%;
-    top: 50%;
-
+    right: 0%;
+    top: 60%;
 }
 
 .year h1 {
-    font-size: 150px;
+    font-size: 70px;
 }
 
 .slideshow-progress {
@@ -179,16 +178,16 @@
   }
   
 #lightbox img {
-    max-width: 80%;
-    max-height: 80%;
-    margin-top: 5%;
+    max-width: 90vw;
+    max-height: 90vh;
+    margin-top: 15%;
     }
 
 #close-btn {
     position: absolute;
-    top: 20px;
+    top: 10%;
     right: 30px;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bold;
     color: #fff;
     background-color: black;
@@ -196,7 +195,7 @@
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
 
     .heroimage {
         margin-bottom: 35%;
@@ -210,7 +209,8 @@
 
     .view-image-btn {
         position: absolute;
-        top: 80%;
+        top: 65%;
+        left: 2%;
         height: 10%;
     }
 
@@ -232,7 +232,7 @@
 
       .artistimage {
         position: absolute;
-        right: 25%;
+        right: 20%;
         top: 45%;
     }
 
@@ -251,8 +251,8 @@
         top: 80%;    
         margin: 10%;
         right: 0;
-        /* margin-top: 30%; */
     }
+
 
     .titleandartistfooter {
         float: left;
