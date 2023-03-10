@@ -12,7 +12,7 @@
   float: right;
   font-size: 24px;
   line-height: 15px;
-  margin-top: 0%;
+  margin-top: 1%;
 }
 
 button {
@@ -24,9 +24,9 @@ button {
 .masonry {
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
-    padding-left: 6%;
-    padding-right: 4%;
+    width: 90vw;
+    padding-left: 3%;
+    padding-right: 0%;
     margin: auto;
     padding-top: 5%;
   }
@@ -47,19 +47,18 @@ button {
     bottom: 40px;
     left: 20px;
     color: white;
-    font-size: 18px;
+    font-size: 14pt;
     font-weight: bold;
-    text-shadow: 1px 1px 2px black;
     width: 80%;
+    margin-bottom: 10px;
   }
   .masonry .item .artist {
     position: absolute;
     bottom: 20px;
     left: 20px;
     color: white;
-    font-size: 14px;
-    text-shadow: 1px 1px 2px black;
-    width: 90%;
+    font-size: 13pt;
+    width: 80%;
   }
   /* Media queries to adjust column width */
   @media screen and (max-width: 2440px) {

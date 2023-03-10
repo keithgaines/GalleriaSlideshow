@@ -30,9 +30,10 @@
 }
 
 .heroimage img {
-    width: 100vw;
+    width: 95vw;
     margin: auto;
     max-height: 70vh;
+    margin-bottom: 10%;
 }
 
 .view-image-btn:hover {
@@ -56,7 +57,7 @@
 
 .titleandartistbox {
     position: absolute;
-    bottom: -45%;
+    bottom: -30%;
     left: 0;
     width: 70%;
     z-index: 1;
@@ -103,14 +104,12 @@
     display: inline-block;
     font-family: 'Libre Baskerville', serif;
     font-weight: 700; /* Bold */
-    opacity: 30%;
     /* margin-bottom: 20px; */
     width: 50%;
     color: #7D7D7D;
     color: rgb(243, 243, 243) hsl(0, 0%, 95%);
     position: absolute;
     right: 0%;
-    top: 60%;
 }
 
 .year h1 {
