@@ -1,9 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Gallery from './Gallery';
 import Artwork from './Artwork';
-import Lightbox from './Lightbox';
-
-
+import ArtworkOne from './ArtworkOne';
+import ArtworkFifteen from './ArtworkFifteen'
 
 const artworks = [
   {
@@ -177,27 +176,61 @@ function App() {
       <Routes>
         <Route path="/" element={<Gallery artworks={artworks} />} />
         {artworks.map((artwork, index) => (
-          <Route 
-            key={artwork.id}
-            path={`/artwork/${artwork.id}`}
-            element={(
-              <Artwork
-                artwork={artwork}
-                nextArtworkId={artworks[index + 1]?.id}
-                title={artwork.title}
-                artist={artwork.artist}
-                artistImage={artwork.artistImage}
-                thumbnail={artwork.thumbnail}
-                year={artwork.year}
-                textBlurb={artwork.blurb}
-                previousArtworkUrl={`/artwork/${artworks[index - 1]?.id}`}
-                nextArtworkUrl={`/artwork/${artworks[index + 1]?.id}`}
-                galleryImage={artwork.image}
-                lightboxImage={artwork.lightboxImage}
-              />
-            )}
+  <Route 
+    key={artwork.id}
+    path={`/artwork/${artwork.id}`}
+    element={(
+      <>
+        {artwork.id === 1 && (
+          <ArtworkOne 
+            artwork={artwork}
+            title={artwork.title}
+            artist={artwork.artist}
+            artistImage={artwork.artistImage}
+            thumbnail={artwork.thumbnail}
+            year={artwork.year}
+            textBlurb={artwork.blurb}
+            previousArtworkUrl={`/artwork/${artworks[index - 1]?.id}`}
+            nextArtworkUrl={`/artwork/${artworks[index + 1]?.id}`}
+            galleryImage={artwork.image}
+            lightboxImage={artwork.lightboxImage}
           />
-        ))}
+        )}
+        {artwork.id === 15 && (
+          <ArtworkFifteen 
+            artwork={artwork}
+            title={artwork.title}
+            artist={artwork.artist}
+            artistImage={artwork.artistImage}
+            thumbnail={artwork.thumbnail}
+            year={artwork.year}
+            textBlurb={artwork.blurb}
+            previousArtworkUrl={`/artwork/${artworks[index - 1]?.id}`}
+            nextArtworkUrl={`/artwork/${artworks[index + 1]?.id}`}
+            galleryImage={artwork.image}
+            lightboxImage={artwork.lightboxImage}
+          />
+        )}
+        {(artwork.id !== 1 && artwork.id !== 15) && (
+          <Artwork 
+            artwork={artwork}
+            title={artwork.title}
+            artist={artwork.artist}
+            artistImage={artwork.artistImage}
+            thumbnail={artwork.thumbnail}
+            year={artwork.year}
+            textBlurb={artwork.blurb}
+            previousArtworkUrl={`/artwork/${artworks[index - 1]?.id}`}
+            nextArtworkUrl={`/artwork/${artworks[index + 1]?.id}`}
+            galleryImage={artwork.image}
+            lightboxImage={artwork.lightboxImage}
+          />
+        )}
+      </>
+    )}
+  />
+))}
+
       </Routes>
     </Router>
   );

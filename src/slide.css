@@ -333,10 +333,14 @@
         position: absolute;
         top: 7%;
         left: 65%;
-        font-size: 100px;
         line-height: 150px;
         width: 10%;
     }
+
+    .year h1 {
+        font-size: 175px;
+    }
+    
 
     .textblurb {
         position: absolute;

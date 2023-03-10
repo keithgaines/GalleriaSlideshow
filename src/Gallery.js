@@ -1,7 +1,8 @@
 import React from 'react';
+import Artwork from './Artwork';
 import './app.css';
 
-function Gallery() {
+function Gallery(props) {
   return (
     <div>
       <div className="header">
@@ -16,12 +17,12 @@ function Gallery() {
       <div className="masonry">
         <div className="column">
           <div className="item">
-            <img src="assets/starry-night/thumbnail.jpg" alt="starry night" />
+            <img src="/assets/starry-night/thumbnail.jpg" alt="starry night" />
             <div className="title">Starry Night</div>
             <div className="artist">Vincent van Gogh</div>
           </div>
           <div className="item">
-            <img src="assets/the-storm-on-the-sea-of-galilee/thumbnail.jpg" alt="the-storm-on-the-sea-of-galilee" />
+            <img src="../assets/the-storm-on-the-sea-of-galilee/thumbnail.jpg" alt="the-storm-on-the-sea-of-galilee" />
             <div className="title">The Storm on the Sea of Galilee</div>
             <div className="artist">Rembrandt</div>
           </div>
