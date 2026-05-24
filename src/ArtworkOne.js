@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import Lightbox from './Lightbox';
-import './slide.css';
-import images from './images';
+import React, { useState, useEffect } from "react";
+import Lightbox from "./Lightbox";
+import "./slide.css";
+import images from "./images";
 
 function ArtworkOne(props) {
   const [showLightbox, setShowLightbox] = useState(false);
-  const [currentArtworkIndex, setCurrentArtworkIndex] = useState(props.artworkIndex);
-  const [currentArtworkUrl, setCurrentArtworkUrl] = useState(props.artwork.thumbnail);
-  const [lightboxImageUrl, setLightboxImageUrl] = useState('');
+  const [currentArtworkIndex, setCurrentArtworkIndex] = useState(
+    props.artworkIndex,
+  );
+  const [lightboxImageUrl, setLightboxImageUrl] = useState("");
 
   const setCloseLightbox = () => {
     setShowLightbox(false);
@@ -15,12 +16,10 @@ function ArtworkOne(props) {
 
   useEffect(() => {
     setCurrentArtworkIndex(props.artworkIndex);
-    setCurrentArtworkUrl(props.artwork.thumbnail);
-  }, [props.artworkIndex, props.artwork.thumbnail]);
+  }, [props.artworkIndex]);
 
-  
   function handleViewImage() {
-    const currentImage = images.find(img => img.id === props.artwork.id);
+    const currentImage = images.find((img) => img.id === props.artwork.id);
     setLightboxImageUrl(currentImage.url);
     setShowLightbox(true);
   }
@@ -29,20 +28,19 @@ function ArtworkOne(props) {
     <div className="artwork-container">
       <div className="header">
         <div className="galleria">galleria</div>
-        <div className='stopslideshow'>
+        <div className="stopslideshow">
           <a href="/">STOP SLIDESHOW</a>
         </div>
       </div>
-      <br />
-      <br />
-      <hr />
+
       <div className="view-image-btn-container">
-        <button className="view-image-btn" onClick={handleViewImage}>View Image</button>
+        <button className="view-image-btn" onClick={handleViewImage}>
+          View Image
+        </button>
       </div>
       <div className="heroimage">
-        <img srcSet={props.artwork.thumbnail} alt="heroimage" />
-
-        <div className='boxparent'>
+        <img srcSet={props.artwork.thumbnail} alt={props.artwork.title} />
+        <div className="boxparent">
           <div className="titleandartistbox">
             <div className="title">
               <h1>{props.artwork.title}</h1>
@@ -54,7 +52,7 @@ function ArtworkOne(props) {
         </div>
       </div>
       <div className="artistimage">
-        <img src={props.artwork.artistImage} alt="artist image" />
+        <img src={props.artwork.artistImage} alt={props.artwork.artist} />{" "}
       </div>
       <div className="year">
         <h1>{props.artwork.year}</h1>
@@ -62,8 +60,8 @@ function ArtworkOne(props) {
       <div className="textblurb">
         <p>{props.artwork.blurb}</p>
         <a href={props.artwork.sourceUrl}>
-            <p>Go to source</p>
-          </a>
+          <p>Go to source</p>
+        </a>
       </div>
       <div className="slideshow-progress">
         <div className="progress-bar"></div>
