@@ -1,19 +1,20 @@
-import React from 'react';
-import Artwork from './Artwork';
-import './app.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import Artwork from "./Artwork";
+import "./app.css";
 
 function Gallery(props) {
   return (
     <div>
-      <div className="header">
-        <div className="galleria">galleria</div>
-        <div className='startslideshow'>
-          <a href="/artwork/1">START SLIDESHOW</a>
+      <header className="navbar">
+        <h1 className="galleria">galleria.</h1>
+
+        <div className="startslideshow">
+          <Link className="slideshow-link" to="/artwork/1">
+            Start Slideshow
+          </Link>{" "}
         </div>
-      </div>
-      <br />
-      <br />
-      <hr />
+      </header>
       <div className="masonry">
         <div className="column">
           <div className="item">
@@ -22,39 +23,60 @@ function Gallery(props) {
             <div className="artist">Vincent van Gogh</div>
           </div>
           <div className="item">
-            <img src="../assets/the-storm-on-the-sea-of-galilee/thumbnail.jpg" alt="the-storm-on-the-sea-of-galilee" />
+            <img
+              src="../assets/the-storm-on-the-sea-of-galilee/thumbnail.jpg"
+              alt="the-storm-on-the-sea-of-galilee"
+            />
             <div className="title">The Storm on the Sea of Galilee</div>
             <div className="artist">Rembrandt</div>
           </div>
           <div className="item">
-            <img src="assets/lady-with-an-ermine/thumbnail.jpg" alt="Lady with an Ermin" />
+            <img
+              src="assets/lady-with-an-ermine/thumbnail.jpg"
+              alt="Lady with an Ermin"
+            />
             <div className="title">Lady with an Ermin</div>
             <div className="artist">Leonardo da Vinci</div>
           </div>
           <div className="item">
-            <img src="assets/the-boy-in-the-red-vest/thumbnail.jpg" alt="The Boy in the Red Vest" />
+            <img
+              src="assets/the-boy-in-the-red-vest/thumbnail.jpg"
+              alt="The Boy in the Red Vest"
+            />
             <div className="title">The Boy in the Red Vest</div>
             <div className="artist">Edward Hopper</div>
           </div>
         </div>
         <div className="column">
           <div className="item">
-            <img src="assets/girl-with-pearl-earring/thumbnail.jpg" alt="Girl with a Pearl Earring" />
+            <img
+              src="assets/girl-with-pearl-earring/thumbnail.jpg"
+              alt="Girl with a Pearl Earring"
+            />
             <div className="title">Girl with a Pearl Earring</div>
             <div className="artist">Johannes Vermeer</div>
           </div>
           <div className="item">
-            <img src="assets/the-great-wave-off-kanagawa/thumbnail.jpg" alt="The Great Wave OFf Kanagawa" />
+            <img
+              src="assets/the-great-wave-off-kanagawa/thumbnail.jpg"
+              alt="The Great Wave OFf Kanagawa"
+            />
             <div className="title">The Great Wave Off Kanagawa</div>
             <div className="artist">Hokusai</div>
           </div>
           <div className="item">
-            <img src="assets/the-night-cafe/thumbnail.jpg" alt="The NIght Cafe" />
+            <img
+              src="assets/the-night-cafe/thumbnail.jpg"
+              alt="The NIght Cafe"
+            />
             <div className="title">The Night Cafe</div>
             <div className="artist">Vincent van Gogh</div>
           </div>
           <div className="item">
-            <img src="assets/arnolfini-portrait/thumbnail.jpg" alt="Arnolfini Portrait" />
+            <img
+              src="assets/arnolfini-portrait/thumbnail.jpg"
+              alt="Arnolfini Portrait"
+            />
             <div className="title">Arnolfini Portrait</div>
             <div className="artist">Jan van Eyck</div>
           </div>
@@ -65,30 +87,42 @@ function Gallery(props) {
             <div className="title">Guernica</div>
             <div className="artist">Pablo Picasso</div>
           </div>
-          <div className="item"> 
-          <img src="assets/van-gogh-self-portrait/thumbnail.jpg" alt="Van Gogh Self Portrait" />
-          <div className="title">Van Gogh Self Portrait</div>
-          <div className="artist">Vincent Van Gogh</div>
-        </div>
-        <div className="item">
-          <img src="assets/mona-lisa/thumbnail.jpg" alt="Mona Lisa" />
-          <div className="title">Mona Lisa</div>
-          <div className="artist">Leonardo da Vinci</div>
-        </div>
+          <div className="item">
+            <img
+              src="assets/van-gogh-self-portrait/thumbnail.jpg"
+              alt="Van Gogh Self Portrait"
+            />
+            <div className="title">Van Gogh Self Portrait</div>
+            <div className="artist">Vincent Van Gogh</div>
+          </div>
+          <div className="item">
+            <img src="assets/mona-lisa/thumbnail.jpg" alt="Mona Lisa" />
+            <div className="title">Mona Lisa</div>
+            <div className="artist">Leonardo da Vinci</div>
+          </div>
         </div>
         <div className="column">
           <div className="item">
-            <img src="assets/penitent-magdalene/thumbnail.jpg" alt="Penitent Magdalene" />
+            <img
+              src="assets/penitent-magdalene/thumbnail.jpg"
+              alt="Penitent Magdalene"
+            />
             <div className="title">Penitent Magdalene</div>
             <div className="artist">Artemisia Gentileschi</div>
           </div>
           <div className="item">
-            <img src="assets/the-sleeping-gypsy/thumbnail.jpg" alt="The Sleeping Gypsy" />
+            <img
+              src="assets/the-sleeping-gypsy/thumbnail.jpg"
+              alt="The Sleeping Gypsy"
+            />
             <div className="title">The Sleeping Gypsy</div>
             <div className="artist">Henri Rousseau</div>
           </div>
           <div className="item">
-            <img src="assets/the-basket-of-apples/thumbnail.jpg" alt="The Basket of Apples" />
+            <img
+              src="assets/the-basket-of-apples/thumbnail.jpg"
+              alt="The Basket of Apples"
+            />
             <div className="title">The Basket of Apples</div>
             <div className="artist">Paul Cézanne</div>
           </div>
@@ -99,8 +133,8 @@ function Gallery(props) {
           </div>
         </div>
       </div>
-      </div>
-   )
+    </div>
+  );
 }
 
 export default Gallery;
