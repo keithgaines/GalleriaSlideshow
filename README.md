@@ -1,22 +1,135 @@
-# Galleria Slideshow React App
+# Galleria Slideshow
 
-This is a React application that showcases a galleria slideshow of classic art pieces. It provides a lightbox view of each art piece, along with detailed information about the piece and a picture of the artist.
+A responsive React application that showcases a curated collection of classic artwork through an immersive gallery and slideshow experience.
+
+The application features a masonry-style gallery layout, artwork detail pages, lightbox image viewing, and responsive navigation optimized for desktop and mobile devices.
+
+---
 
 ## Features
 
-- Slideshow: The app displays a slideshow of classic art pieces, allowing users to navigate through different pieces using navigation controls.
-- Lightbox View: Clicking on an art piece opens a lightbox view, providing a larger image of the art piece.
-- Information Display: Each art piece slide contains detailed information about the piece, such as the title, artist, year, and description. It also includes a picture of the artist.
-- Responsive Design: The app is designed to be responsive, ensuring optimal viewing experience across different devices and screen sizes.
+### Gallery Experience
+
+* Responsive masonry gallery layout
+* Interactive artwork hover states
+* Modernized navigation and typography
+* Optimized spacing and responsive behavior
+
+### Slideshow Experience
+
+* Artwork detail pages for each painting
+* Sequential slideshow navigation
+* Lightbox image viewing experience
+* Artwork metadata including:
+
+  * title
+  * artist
+  * year
+  * historical description
+
+### UI / UX Improvements
+
+* Editorial-inspired layout design
+* Responsive mobile/tablet support
+* Improved accessibility and semantic structure
+* Production-ready CSS refactor
+* Cleaner component organization and styling architecture
+
+---
+
+## Tech Stack
+
+* React
+* React Router
+* CSS3
+* JavaScript (ES6)
+
+---
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/galleria-slideshow.git`
-2. Navigate to the project directory: `cd galleria-slideshow`
-3. Install the dependencies: `npm install`
+Clone the repository:
 
-## Usage
+```bash
+git clone https://github.com/keithgaines/GalleriaSlideshow.git
+```
 
-1. Start the development server: `npm start`
-2. Open your web browser and visit: `http://localhost:3000`
+Navigate into the project directory:
 
+```bash
+cd GalleriaSlideshow
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+## Running the Application
+
+Start the development server:
+
+```bash
+npm start
+```
+
+Open the application in your browser:
+
+```txt
+http://localhost:3000
+```
+
+---
+
+## Production Build
+
+Generate an optimized production build:
+
+```bash
+npm run build
+```
+
+---
+
+## Project Structure
+
+```txt
+src/
+├── Artwork.js
+├── ArtworkOne.js
+├── ArtworkFifteen.js
+├── Gallery.js
+├── Lightbox.js
+├── images.js
+├── app.css
+├── slide.css
+└── App.js
+```
+
+---
+
+## Current Improvements
+
+Recent updates include:
+
+* Modernized responsive layout system
+* Refactored slideshow page design
+* Improved navigation styling
+* Accessibility and CI build fixes
+* Removal of legacy float-based CSS patterns
+* Improved Vercel deployment compatibility
+
+---
+
+## Deployment
+
+The application is deployed on Vercel.
+
+Live Site:
+
+```txt
+https://slideshowreact.vercel.app/
+```
