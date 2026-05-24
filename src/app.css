@@ -1,78 +1,148 @@
+.navbar {
+  width: min(100% - 4rem, 1440px);
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
+}
+
 .galleria {
-  float: left;
-  padding-left: 20px;
-  font-family: 'Libre Baskerville', serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 29px;
-  margin-top: 0%;
+  margin: 0;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #111;
 }
 
 .startslideshow {
-  float: right;
-  font-size: 24px;
-  line-height: 15px;
-  margin-top: 1%;
+  display: flex;
+  align-items: center;
 }
 
-button {
-  float: right;
-  border-radius: 0px;
-  background-color: white;
+.startslideshow .slideshow-link {
+  border: none;
+  background: transparent;
+  color: #7d7d7d;
+  padding: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 180ms ease;
+}
+
+.startslideshow .slideshow-link:hover {
+  color: #111;
 }
 
 .masonry {
-    display: flex;
-    flex-wrap: wrap;
-    width: 90vw;
-    padding-left: 3%;
-    padding-right: 0%;
-    margin: auto;
-    padding-top: 5%;
-  }
-  .masonry .column {
-    width: 25%;
-    margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: min(100% - 4rem, 1440px);
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+.masonry .column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.masonry .item {
+  position: relative;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.masonry .item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition:
+    transform 300ms ease,
+    filter 300ms ease;
+}
+
+.masonry .item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.72),
+    rgba(0, 0, 0, 0.08) 55%,
+    transparent
+  );
+}
+
+.masonry .item:hover img {
+  transform: scale(1.04);
+  filter: saturate(1.05);
+}
+
+.masonry .item .title,
+.masonry .item .artist {
+  position: absolute;
+  left: 1.25rem;
+  z-index: 1;
+  color: white;
+  width: calc(100% - 2.5rem);
+}
+
+.masonry .item .title {
+  bottom: 3rem;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.masonry .item .artist {
+  bottom: 1.5rem;
+  font-size: 0.85rem;
+  opacity: 0.82;
+}
+
+@media screen and (max-width: 1000px) {
+  .masonry {
+    grid-template-columns: repeat(2, 1fr);
+    width: min(100% - 2rem, 900px);
   }
 
-  .masonry .item {
-    position: relative;
-    margin-bottom: 20px;
+  .navbar {
+    width: min(100% - 2rem, 900px);
   }
-  .masonry .item img {
-    width: 90%;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    width: calc(100% - 2rem);
+    padding: 1.5rem 0;
   }
-  .masonry .item .title {
-    position: absolute;
-    bottom: 40px;
-    left: 20px;
-    color: white;
-    font-size: 14pt;
-    font-weight: bold;
-    width: 80%;
-    margin-bottom: 10px;
+
+  .galleria {
+    font-size: 1.35rem;
   }
-  .masonry .item .artist {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    font-size: 13pt;
-    width: 80%;
+
+  .startslideshow button {
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
   }
-  /* Media queries to adjust column width */
-  @media screen and (max-width: 2440px) {
-    .masonry .column {
-      width: 25%;
-    }
+
+  .masonry {
+    grid-template-columns: 1fr;
+    width: calc(100% - 2rem);
+    gap: 1rem;
   }
-  @media screen and (max-width: 800px) {
-    .masonry .column {
-      width: 50%;
-    }
+
+  .masonry .column {
+    gap: 1rem;
   }
-  @media screen and (max-width: 600px) {
-    .masonry .column {
-      width: 100%;
-    }
-  }
+}
