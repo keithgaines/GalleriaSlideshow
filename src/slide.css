@@ -1,354 +1,214 @@
-/* Including Libre Baskerville Bold font */
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400');
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700');
-
-.galleria {
-    padding-left: 20px;
-    font-family: 'Libre Baskerville', serif;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    margin-top: 0%;
-}
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700");
 
 .header {
-    margin-top: 3%;
-}
-
-.startslideshow {
-    float: right;
+  width: min(100% - 4rem, 1440px);
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .stopslideshow {
-    float: right;
-    margin-top: 1%;
+  margin: 0;
 }
 
 .heroimage {
-    position: relative;
-    margin-bottom: 40%;
+  position: relative;
+  width: min(100% - 4rem, 1440px);
+  margin: 4rem auto 0;
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(320px, 5fr);
+  gap: 4rem;
+  align-items: start;
 }
 
 .heroimage img {
-    width: 95vw;
-    margin: auto;
-    max-height: 70vh;
-    margin-bottom: 10%;
+  width: 100%;
+  max-height: 72vh;
+  object-fit: contain;
+  display: block;
 }
 
-.view-image-btn:hover {
-    background-color: white;
-    color: black;
+.view-image-btn-container {
+  width: min(100% - 4rem, 1440px);
+  margin: 2rem auto 0;
 }
 
 .view-image-btn {
-    position: absolute;
-    top: 7%;
-    left: 30px;
-    display: block;
-    margin: 30px auto;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    z-index: 10;
+  border: none;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 0.9rem 1.2rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  cursor: pointer;
+}
+
+.view-image-btn:hover {
+  background: #fff;
+  color: #111;
+  outline: 1px solid #111;
 }
 
 .titleandartistbox {
-    position: absolute;
-    bottom: -30%;
-    left: 0;
-    width: 70%;
-    z-index: 1;
-    background-color: white;
-    padding-left: 25px;
-  }
+  background: #fff;
+  padding: 2rem 0 1rem;
+}
 
 .title {
-    font-family: 'Libre Baskerville', serif;
-    font-weight: 600;
-    font-size: 15pt;
-    /* line-height 19px; */
+  margin: 0 0 0.75rem;
+  font-family: "Libre Baskerville", serif;
+  font-size: clamp(2rem, 4vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #111;
 }
 
 .artist {
-    font-family: 'Libre Baskerville', serif;
-    font-weight: 400;
-    font-size: 13pt;
-    /* line-height: 15px; */
-    color: #7D7D7D;
-    color: rgb(243, 243, 243) hsl(0, 0%, 95%)
-}
-
-.textblurb {
-    padding-left: 5%;
-    padding-right: 5%;
-    font-family: 'Libre Baskerville', serif;
-    font-size: 14px;
-    line-height: 28px;
-}
-
-.artistimage {
-    display: inline-block;    
-    margin-bottom: 30px;
-    padding-left: 20px;
-}
-
-.artistimage img {
-    width: 100%;
-    margin-top: 20%;
+  margin: 0;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1rem;
+  color: #7d7d7d;
 }
 
 .year {
-    display: inline-block;
-    font-family: 'Libre Baskerville', serif;
-    font-weight: 700; /* Bold */
-    /* margin-bottom: 20px; */
-    width: 50%;
-    color: #7D7D7D;
-    color: rgb(243, 243, 243) hsl(0, 0%, 95%);
-    position: absolute;
-    right: 0%;
+  margin-top: 2rem;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  color: #f3f3f3;
 }
 
 .year h1 {
-    font-size: 70px;
+  margin: 0;
+  font-size: clamp(5rem, 12vw, 12rem);
+  line-height: 0.85;
+}
+
+.textblurb {
+  margin-top: -4rem;
+  margin-left: auto;
+  width: min(100% - 4rem, 560px);
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: #7d7d7d;
+}
+
+.artistimage {
+  width: min(100% - 4rem, 1440px);
+  margin: 3rem auto;
+}
+
+.artistimage img {
+  width: min(160px, 40vw);
+  display: block;
 }
 
 .slideshow-progress {
-    position: relative;
-    height: 4px;
-    background-color: #ddd;
-    margin-top: 20px;
-  }
-  
-.progress-bar {
-    position: absolute;
-    height: 100%;
-    background-color: #4CAF50;
-    width: 0%;
-    transition: width 0.5s;
-  }
-  
-.titleandartist {
-    float: left;
-    width: 40%;
+  height: 2px;
+  background-color: #e5e5e5;
+  margin-top: 3rem;
 }
 
+.progress-bar {
+  height: 100%;
+  background-color: #111;
+  width: 0%;
+  transition: width 0.5s;
+}
 
-.footer .artist {
-    width: 50%;
-    color: black;
+.footer {
+  width: min(100% - 4rem, 1440px);
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e5e5e5;
 }
 
 .titleandartistfooter {
-    float: left;
-    width: 100%;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.footer .artist {
+  color: #7d7d7d;
 }
 
 .slideshow-controls {
-    float: right;
-    width: 100%;
-    margin-top: 8%;
-    margin-right: 8%;
-    gap: 20px; 
+  display: flex;
+  gap: 1rem;
 }
 
 .slideshow-controls button {
-    padding: 15px;
-    margin-right: 10px;
-    margin-left: 10px;
-    width: 100px;
-    background-color: black;
-    color: white;
+  border: none;
+  background: #111;
+  color: #fff;
+  padding: 0.9rem 1.2rem;
+  min-width: 100px;
+  cursor: pointer;
 }
-  
+
+.slideshow-controls button:hover {
+  background: #7d7d7d;
+}
+
 #lightbox {
-    display: block;
-    position: fixed;
-    z-index: 9999;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    text-align: center;
-  }
-  
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.92);
+}
+
 #lightbox img {
-    max-width: 90vw;
-    max-height: 90vh;
-    margin-top: 3%;
-    margin-bottom: 10%;
-    }
+  max-width: 90vw;
+  max-height: 90vh;
+}
 
 #close-btn {
-    position: absolute;
-    top: 10%;
-    right: 30px;
-    font-size: 30px;
-    font-weight: bold;
-    color: #fff;
-    background-color: black;
-    cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
+@media (max-width: 900px) {
+  .header,
+  .heroimage,
+  .footer,
+  .artistimage {
+    width: calc(100% - 2rem);
+  }
 
-@media (min-width: 769px) {
+  .heroimage {
+    margin-top: 2rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 
-    .heroimage {
-        margin-bottom: 35%;
-    }
+  .titleandartistbox {
+    padding: 0;
+  }
 
-    .heroimage img {
-        width: 60%;
-        margin: auto;
-        height: 70vh;
-    }
+  .textblurb {
+    width: calc(100% - 2rem);
+    margin: 2rem auto;
+  }
 
-    .view-image-btn {
-        position: absolute;
-        top: 65%;
-        left: 2%;
-        height: 10%;
-    }
-
-    .titleandartistbox {
-        position: absolute;
-        top: 0%;
-        left: 40%;
-        width: 30%;
-        height: 40%;
-      }
-
-      .titleandartistbox h1 {
-        font-size: 29pt;
-      }
-
-      .titleandartistbox p {
-        font-size: 15pt;
-      }
-
-      .artistimage {
-        position: absolute;
-        right: 20%;
-        top: 45%;
-    }
-
-    .year {
-        position: absolute;
-        top: 70%;
-        left: 5%;
-        font-size: 100px;
-        line-height: 150px;
-        color: rgb(229, 229, 229) hsl(0, 0%, 90%);
-    }
-
-    .textblurb {
-        position: absolute;
-        width: 80%;
-        top: 80%;    
-        margin: 10%;
-        right: 0;
-    }
-
-
-    .titleandartistfooter {
-        float: left;
-        width: 50%;
-    }
-    
-    .slideshow-controls {
-        float: right;
-        width: 40%;
-        margin-top: 8%;
-        margin-right: 8%;
-        gap: 20px; 
-    }
-    
-    .slideshow-controls button {
-        padding: 15px;
-        margin-right: 10px;
-        margin-left: 10px;
-        width: 100px;
-        background-color: black;
-        color: white;
-    }
-}
-
-@media (min-width: 1440px) {
-
-    .heroimage {
-        position: relative;
-        width: 100%;
-        margin-bottom: 0%;
-        margin-top: 5%;
-    }
-
-    .heroimage img {
-        width: 40%;
-        margin: auto;
-        padding-bottom: 0%;
-        max-height: 80vh;
-    }
-
-    .view-image-btn {
-        position: absolute;
-        top: 70%;
-        left: 15px;
-        width: 10%;
-        height: 10%;
-    }
-
-    .titleandartistbox {
-        position: absolute;
-        top: 0%;
-        left: 30%; 
-        width: 30%;
-        height: 40%;
-      }
-
-      .titleandartistfooter {
-        float: left;
-        width: 50%;
-    }
-
-      .title {
-        font-size: 30px;
-      }
-
-      .artist {
-        font-size: 25px;
-    }
-
-      .artistimage {
-        position: absolute;
-        right: 50%;
-        top: 70%;
-    }
-
-    .year {
-        position: absolute;
-        top: 7%;
-        left: 65%;
-        line-height: 150px;
-        width: 10%;
-    }
-
-    .year h1 {
-        font-size: 175px;
-    }
-    
-
-    .textblurb {
-        position: absolute;
-        width: 30%;
-        right: 0%;
-        top: 25%;    
-        margin-bottom: 10%;
-        z-index: 1;
-
-    }
-
+  .footer {
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex-direction: column;
+  }
 }
