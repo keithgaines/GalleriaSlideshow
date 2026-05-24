@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Artwork from "./Artwork";
 import "./app.css";
 
 function Gallery(props) {
@@ -12,7 +11,7 @@ function Gallery(props) {
         <div className="startslideshow">
           <Link className="slideshow-link" to="/artwork/1">
             Start Slideshow
-          </Link>{" "}
+          </Link>
         </div>
       </header>
       <div className="masonry">

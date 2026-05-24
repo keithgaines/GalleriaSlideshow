@@ -8,9 +8,7 @@ function Artwork(props) {
   const [currentArtworkIndex, setCurrentArtworkIndex] = useState(
     props.artworkIndex,
   );
-  const [currentArtworkUrl, setCurrentArtworkUrl] = useState(
-    props.artwork.thumbnail,
-  );
+
   const [lightboxImageUrl, setLightboxImageUrl] = useState("");
 
   const setCloseLightbox = () => {
@@ -19,8 +17,7 @@ function Artwork(props) {
 
   useEffect(() => {
     setCurrentArtworkIndex(props.artworkIndex);
-    setCurrentArtworkUrl(props.artwork.thumbnail);
-  }, [props.artworkIndex, props.artwork.thumbnail]);
+  }, [props.artworkIndex]);
 
   function handleViewImage() {
     const currentImage = images.find((img) => img.id === props.artwork.id);
@@ -43,8 +40,7 @@ function Artwork(props) {
         </button>
       </div>
       <div className="heroimage">
-        <img srcSet={props.artwork.thumbnail} alt="heroimage" />
-
+        <img srcSet={props.artwork.thumbnail} alt={props.artwork.title} />
         <div className="boxparent">
           <div className="titleandartistbox">
             <div className="title">
@@ -57,7 +53,7 @@ function Artwork(props) {
         </div>
       </div>
       <div className="artistimage">
-        <img src={props.artwork.artistImage} alt="artist image" />
+        <img src={props.artwork.artistImage} alt={props.artwork.artist} />{" "}
       </div>
       <div className="year">
         <h1>{props.artwork.year}</h1>
