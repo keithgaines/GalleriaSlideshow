@@ -1,8 +1,30 @@
-# Galleria Slideshow
+# Galleria
 
-A responsive React application that showcases a curated collection of classic artwork through an immersive gallery and slideshow experience.
+Responsive React application that showcases a curated collection of artwork through an interactive gallery and slideshow experience.
 
-The application features a masonry-style gallery layout, artwork detail pages, lightbox image viewing, and responsive navigation optimized for desktop and mobile devices.
+The project focuses on responsive layouts, component organization, and user experience.
+
+---
+
+## Screenshots
+
+<img width="1656" height="1793" alt="galleriaScreenshot" src="https://github.com/user-attachments/assets/2f615c0f-8247-4033-ab25-e2d67d32b71d" />
+<img width="1656" height="2273" alt="slideshowImage" src="https://github.com/user-attachments/assets/51858d34-a037-45ad-bf64-21b72fd8e2ab" />
+
+
+---
+
+## Overview
+
+Galleria provides a gallery and slideshow experience for viewing artwork and related information.
+
+The application emphasizes:
+
+* Responsive design
+* Interactive navigation
+* Component organization
+* Frontend maintainability
+* User experience
 
 ---
 
@@ -10,117 +32,101 @@ The application features a masonry-style gallery layout, artwork detail pages, l
 
 ### Gallery Experience
 
-* Responsive masonry gallery layout
-* Interactive artwork hover states
-* Modernized navigation and typography
-* Optimized spacing and responsive behavior
+* Responsive masonry layout
+* Interactive hover states
+* Improved navigation and typography
+* Optimized spacing across screen sizes
 
 ### Slideshow Experience
 
-* Artwork detail pages for each painting
+* Artwork detail pages
 * Sequential slideshow navigation
-* Lightbox image viewing experience
-* Artwork metadata including:
+* Lightbox image viewing
+* Artwork metadata and descriptions
 
-  * title
-  * artist
-  * year
-  * historical description
+### UI Improvements
 
-### UI / UX Improvements
-
-* Editorial-inspired layout design
-* Responsive mobile/tablet support
-* Improved accessibility and semantic structure
-* Production-ready CSS refactor
-* Cleaner component organization and styling architecture
+* Editorial-inspired layouts
+* Responsive mobile and tablet support
+* Accessibility improvements
+* CSS refactoring
+* Cleaner component organization
 
 ---
 
 ## Tech Stack
 
+### Frontend
+
 * React
 * React Router
-* CSS3
-* JavaScript (ES6)
+* JavaScript
+* CSS
 
----
+### Deployment
 
-## Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/keithgaines/GalleriaSlideshow.git
-```
-
-Navigate into the project directory:
-
-```bash
-cd GalleriaSlideshow
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
----
-
-## Running the Application
-
-Start the development server:
-
-```bash
-npm start
-```
-
-Open the application in your browser:
-
-```txt
-http://localhost:3000
-```
-
----
-
-## Production Build
-
-Generate an optimized production build:
-
-```bash
-npm run build
-```
+* Vercel
 
 ---
 
 ## Project Structure
 
-```txt
+```text id="t2vm4n"
 src/
-├── Artwork.js
-├── ArtworkOne.js
-├── ArtworkFifteen.js
-├── Gallery.js
-├── Lightbox.js
-├── images.js
-├── app.css
-├── slide.css
+├── components/
+├── pages/
+├── data/
+├── styles/
 └── App.js
 ```
 
 ---
 
-## Current Improvements
+## Improvements
 
-Recent updates include:
+Recent work included:
 
-* Modernized responsive layout system
-* Refactored slideshow page design
-* Improved navigation styling
-* Accessibility and CI build fixes
-* Removal of legacy float-based CSS patterns
-* Improved Vercel deployment compatibility
+* Responsive layout modernization
+* Slideshow redesign
+* Navigation improvements
+* Accessibility fixes
+* Removal of legacy CSS patterns
+* Vercel deployment improvements
+
+---
+
+## What This Project Demonstrates
+
+* Responsive UI development
+* Component-based architecture
+* State-driven navigation
+* Frontend refactoring
+* User experience design
+* CSS organization
+
+---
+
+## Local Development
+
+### Install Dependencies
+
+```bash id="0yd83z"
+npm install
+```
+
+### Start Development Server
+
+```bash id="dk0dbq"
+npm start
+```
+
+---
+
+## Build
+
+```bash id="vyg2ix"
+npm run build
+```
 
 ---
 
@@ -128,8 +134,14 @@ Recent updates include:
 
 The application is deployed on Vercel.
 
-Live Site:
+https://slideshowreact.vercel.app
 
-```txt
-https://slideshowreact.vercel.app/
-```
+---
+
+## Future Enhancements
+
+* Additional artwork collections
+* Search functionality
+* Favorites system
+* Improved accessibility
+* Performance optimizations
